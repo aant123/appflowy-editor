@@ -42,7 +42,7 @@ class _ToolbarWidgetState extends State<ToolbarWidget> with ToolbarMixin {
       child: CompositedTransformFollower(
         link: widget.layerLink,
         showWhenUnlinked: true,
-        offset: widget.offset,
+        offset: Offset(widget.offset.dx, widget.offset.dy - 10),
         followerAnchor: widget.alignment,
         child: _buildToolbar(context),
       ),
@@ -63,7 +63,7 @@ class _ToolbarWidgetState extends State<ToolbarWidget> with ToolbarMixin {
       child: Padding(
         padding: const EdgeInsets.only(left: 8.0, right: 8.0),
         child: SizedBox(
-          height: 32.0,
+          height: 40.0,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: widget.items
